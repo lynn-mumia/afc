@@ -1,15 +1,5 @@
 <?php
   require_once("dbcredentials.php");
-
-
-  $connection=mysqli_connect( SERVERNAME,DBUSER,DBPASSWORD,DATABASE);
-
-  if(mysqli_connect_errno()){
-    echo "connection Failed";
-    mysqli_connect_error();
-  }
-
-  /*
   class DBConnection{
 
     public $connection;
@@ -26,12 +16,13 @@
       }
     }
 
+
  /**
   * Database fetch method
   * @return true or false
   **/
 
- /* public function fetch(){
+  public function fetch(){
     //check if results has content
     if($this ->dbresults == false)
     {
@@ -128,5 +119,5 @@
         return false;
     }
   }
-*/
+
 ?>

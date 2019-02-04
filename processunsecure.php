@@ -1,38 +1,26 @@
 <?php
   require_once("database/dbconnection.php");
-
   $email = $password = $firstname = $lastname = $phone =
   $email_err = $email_error = $password_error =
   $password_err = $firstname_err = $firstname_error = $lastname_err =
   $lastname_error = $phone_err = $phone_error =  $userStat = $country= $country_err = $country_error=
   $farm= $farm_err= $farm_error= $size= $size_err= $size_error= $city= $city_err= $city_error= $irrigation= 
-  $irrigation_err=  $irrigation_error= $venture= $venture_err= $venture_error= $type=
+  $irrigation_err=  $irrigation_error= $venture= $venture_err= $venture_error= 
   $login_notice =  $register_notice = "";
 
-  /*if(isset($_POST['login']))
-    //validLogin();*/
+  if(isset($_POST['login']))
+    validLogin();
 
-  if(isset($_POST['register']))        
-                  $type = "user";
-                  $status = 1;
+  elseif(isset($_POST['register']))
+    validRegistry();
 
-                  $GLOBALS['password'] = password_hash($GLOBALS['password'], PASSWORD_DEFAULT);
-                  $sql = "INSERT INTO users(firstName, lastName, password, phonenumber, email, country, farmLocation, city, farmSize, irrigationMethod, mainVenture,type, status) VALUES ('$firstname',
-                                  '$lastname','$password','$phone','$email'], '$country','$farm','$city', '$size'],'$irrigation'],'$venture','$type',$status)";
-                $sql2= mysqli_query($connection, $sql);
-    
-                  if($sql2==true){
-                    header("location:login.php");
-                  }
- /* if(isset($_GET['checkU']))
+  if(isset($_GET['checkU']))
     checkUsername($_GET['checkU']);
 
   if(isset($_POST['passchange'])){
     forgotpass();
-  }*/
-
-
- /* function clean($data) {
+  }
+  function clean($data) {
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
@@ -93,10 +81,8 @@
       $GLOBALS['login_notice']= "Error: " . $sql . "<br>" . $connection->error();
     }
   }
-*/
 
-  
- /* function validRegistry(){
+  function validRegistry(){
     $valid=true;
 
     $GLOBALS['firstname'] = isset($_POST['fname'])? clean($_POST['fname']):"";
@@ -219,6 +205,7 @@
 
   function registerUser(){
 
+    echo "In register User Function";
     require_once("database/dbconnection.php");
     $connection = new DBConnection;
 
@@ -247,9 +234,9 @@
     }
     $connection->close($result);
   }
-*/
 
-  /*function checkUsername($user_name){
+
+  function checkUsername($user_name){
     $connection = new DBConnection;
 
     $sql = "SELECT * FROM users WHERE username = '$user_name'";
@@ -260,9 +247,9 @@
       echo "0";
     $connection->close();
   }
-*/
+
 	
-  /*function forgotpass(){
+  function forgotpass(){
     //attaining the respective variables
     $uname = $_REQUEST['username'];
     $npass = $_REQUEST['newpasswd'];
@@ -291,6 +278,5 @@
     else{
       echo "Your password does not match";
     }
-  }*/
-
+  }
   ?>
