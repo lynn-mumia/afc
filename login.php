@@ -43,7 +43,7 @@
 			 		 <div class="panel-body">
 					<h1 class = "text-center">Register</h1>
 					<a href="../index.html"><img src="images/registerlogo.png" style="margin-left:25%;" title="AFC logo" alt="afc logo"></a>
-					<form method="post" action="">
+					<form method="post" action="login_check.php">
 						<span style = "color:red"><?php echo $login_notice; ?></span>
 						<!-- User enters username -->
 						<div class="form-group">

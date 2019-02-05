@@ -1,3 +1,4 @@
+
 <?php include("processunsecure.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +47,7 @@
 					<h1 class = "text-center">Register</h1>
 					<a href="../html-link.htm"><img src="images/registerlogo.png" style="margin-left:25%;" title="AFC logo" alt="afc logo"></a>
 				
-					<form method="post" action="register_insert.php">
+					<form method="post" action="processunsecure.php">
 						<span style = "color:red"><?php echo $register_notice; ?></span>
 						<div class="row">
 							<!-- Field for first name -->

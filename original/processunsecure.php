@@ -48,7 +48,7 @@
   }
 
   function loginUser(){
-    require_once("dbconnect.php");
+    require_once("database/dbconnection.php");
     $type = "";
 
     $connection = new DBConnection;
