@@ -128,7 +128,7 @@
                 </li>
               
                 <li>
-                  <a href="https://test.africafarmers.org/wp/">THE BLOG</a>
+                  <a href="index-8.html">THE BLOG</a>
                 </li>
 
                 <li>
@@ -174,7 +174,7 @@
                  form
                 </small>
               </h2>
-              <form id="contact-form" class='contact-form' method="post" action="MailHandler.php">
+              <form id="contact-form" class='contact-form' method="post" action="contact.php">
                 <div class="contact-form-loader"></div>
                 <fieldset>
                   <label class="name">

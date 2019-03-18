@@ -42,8 +42,8 @@
 					<div class="panel panel-default col-md-6 col-md-offset-3">
 			 		 <div class="panel-body">
 					<h1 class = "text-center">Register</h1>
-					<a href="../index.html"><img src="images/registerlogo.png" style="margin-left:25%;" title="AFC logo" alt="afc logo"></a>
-					<form method="post" action="login_check.php">
+					<a href="index.html"><img src="images/registerlogo.png" style="margin-left:25%;" title="AFC logo" alt="afc logo"></a>
+					<form method="post" action="login_check.php" onsubmit="return validateForm()" name="login">
 						<span style = "color:red"><?php echo $login_notice; ?></span>
 						<!-- User enters username -->
 						<div class="form-group">
@@ -86,5 +86,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/processunsecure.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
 </body>
 </html>

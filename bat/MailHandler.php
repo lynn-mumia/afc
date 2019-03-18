@@ -1,12 +1,13 @@
 <?php
-	$owner_email='#'; 
+    $owner_email=array('info@africafarmers.org');
+	//$owner_email='lynn@africafarmers.org'; 
 	//SMTP server settings	
 	$host = '';
     $port = '465';//"587";
     $username = ''; 
     $password = '';
 
-    $subject='A message from your site visitor ';
+    $subject='A message from Africa Farmers Club Site';
     $user_email='';    
 	$message_body='';
 	$message_type='html';

@@ -41,12 +41,13 @@
 		<body style = "padding-top: 50px; padding-bottom: 150px;">
 			<div class = "container">
 				<div class = "row">
+				
 					<div class="panel panel-default col-md-6 col-md-offset-3">
 			 		 <div class="panel-body">
 					<h1 class = "text-center">Register</h1>
-					<a href="../html-link.htm"><img src="images/registerlogo.png" style="margin-left:25%;" title="AFC logo" alt="afc logo"></a>
+					<a href="index.html"><img src="images/registerlogo.png" style="margin-left:25%;" title="AFC logo" alt="afc logo"></a>
 				
-					<form method="post" action="register_insert.php">
+					<form method="post" action="register_insert.php" onsubmit="return validateForm()" name="register">
 						<span style = "color:red"><?php echo $register_notice; ?></span>
 						<div class="row">
 							<!-- Field for first name -->
@@ -207,7 +208,7 @@
 							</div>
 							<!-- Field for farm size -->
 							<div class="form-group col-md-6">
-							<label for="size">Farm Size<span style = "color:red">
+							<label for="size"> Active Farm Size<span style = "color:red">
 							<?php echo $size_err; ?></span></label>
 							<input type="text" class="form-control" name="size" id="size"
 							value="<?php echo $size; ?>" placeholder="Farm Size">
@@ -240,8 +241,8 @@
 							    placeholder="Farm Venture" autofocus>
 							    <span style = "color:red"><?php echo $venture_error; ?></span>
 							      <option value="select">Select</option>
-							      <option <?php if ($venture == 'crop' ) echo 'selected' ; ?> value="crop">Crop Farming</option>
-							      <option <?php if ($venture == 'animal' ) echo 'selected' ; ?> value="animal">Animal Farming</option>
+							      <option <?php if ($venture == 'crop' ) echo 'selected' ; ?> value="crop">Crop Production</option>
+							      <option <?php if ($venture == 'animal' ) echo 'selected' ; ?> value="animal">Animal Production</option>
 							      <option <?php if ($venture == 'both' ) echo 'selected' ; ?> value="both">Both</option>
 							    </select>
 							</div>
@@ -297,6 +298,7 @@
 	<!--javascript-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/processunsecure.js"></script>+
+	<script type="text/javascript" src="js/processunsecure.js"></script>
+	<script type="text/javascript" src="js/register.js"></script>
 </body>
 </html>

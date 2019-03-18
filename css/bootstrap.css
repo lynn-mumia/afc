@@ -2032,7 +2032,7 @@ header .top-sect .help-box p {
   margin-top: 52px;
   text-transform: uppercase;
 }
-header .top-sect .help-box a {
+header .top-sect .help-box a  {
   display: block;
   color: #4CAF50;
   font-size: 30px;
@@ -2042,6 +2042,19 @@ header .top-sect .help-box a {
   position: relative;
   padding-left: 38px;
 }
+
+header .top-sect .help-box button{
+  display: block;
+  font-family: 'FontAwesome';
+  color: #4CAF50;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 45px;
+  letter-spacing: -1px;
+  position: relative;
+  padding-left: 38px;
+}
+
 header .top-sect .help-box a:before {
   position: absolute;
   content: "\f10b";
@@ -3979,6 +3992,7 @@ output {
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  border-radius: 1rem;
 }
 .form-control:focus {
   border-color: #66afe9;
@@ -5085,6 +5099,7 @@ tbody.collapse.in {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
+
 
 .map-responsive{
     overflow:hidden;
@@ -6607,7 +6622,7 @@ a.badge:focus {
   margin-top: 8px;
 }
 .thumbnail .caption .wrap .thumb_ins1 {
-  width: 50%;
+  width: 90%;
 }
 @media (max-width: 1199px) {
   .thumbnail h3 {
@@ -6620,7 +6635,7 @@ a.badge:focus {
   .thumbnail .caption .wrap p,
   .thumbnail .caption .wrap .thumb_ins1 {
     font-size: 13px;
-    width: 94%;
+    width: 100%;
   }
   .thumbnail .btn-link:before {
     font-size: 36px;
